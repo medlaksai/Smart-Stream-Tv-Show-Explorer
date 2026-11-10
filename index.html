@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Stream</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+
+</head>
+<body class="bg-[#0B0F19] h-screen overflow-hidden">
+    
+    <div class="flex flex-cols gap-2 h-full md:flex-row">
+    <aside class="flex shrink-0 w-full flex-col border-r border-gray-700 p-4 md:h-full md:w-72 gap-4 bg-[#111827] ">
+            <h2 class="text-gray-50 font-bold text-xl px-4 m-2 text-shadow-md text-center">Smart Stream</h2>
+        <div class="flex flex-col text-place-center gap-4 py-4">
+            <input type="search" placeholder="Recherche Categorie" class="border rounded-xl p-2 text-white bg-slate-800 ">
+        </div>
+        <div class="flex flex-col gap-4 ">
+          <span class="text-white">CATEGORIES</span>
+
+        <div class=" border border-gray-700 p-2 rounded-lg hover:bg-gray-700 ">
+            <div class="">
+            <button class="flex  w-full cursor-pointer">
+                
+                <span class="text-white whitespace-nowrap">Tout les chaînes</span>
+                
+            </button>
+            </div>
+        </div>
+
+        <div class=" border border-gray-700 p-2 rounded-lg hover:bg-gray-700 ">
+            <div class="">
+            <button class="grid grid-cols-3 w-full cursor-pointer">
+                <span class="text-white ">Actualités</span>
+                <div class="place-self-end">
+                  <span></span>
+                </div>
+            </button>
+            </div>
+        </div>
+
+        <div class=" border border-gray-700 p-2 rounded-lg hover:bg-gray-700">
+            <div class="">
+            <button class="grid grid-cols-3 w-full cursor-pointer">
+                <span class="text-white ">Sports</span>
+                <div class="place-self-end">
+                  <span></span>
+                </div>
+            </button>
+            </div>
+        </div>
+
+        <div class=" border border-gray-700 p-2 rounded-lg hover:bg-gray-700">
+            <div class="">
+            <button class="grid grid-cols-3 w-full cursor-pointer">
+                <span class="text-white ">Documentaire</span>
+                <div class="place-self-end">
+                  <span></span>
+                </div>
+            </button>
+            </div>
+        </div>
+
+        <div class=" border border-gray-700 p-2 rounded-lg hover:bg-gray-700">
+            <div class="">
+            <button class="grid grid-cols-3 w-full cursor-pointer">
+                <span class="text-white ">Musique</span>
+                <div class="place-self-end">
+                  <span></span>
+                </div>
+            </button>
+            </div>
+        </div>
+
+        <div class=" border border-gray-700 p-2 rounded-lg hover:bg-gray-700">
+            <div class="">
+            <button class="grid grid-cols-3 w-full cursor-pointer">
+                <span class="text-white ">Enfant</span>
+                <div class="place-self-end">
+                  <span></span>
+                </div>
+            </button>
+            </div>
+        </div>
+
+        
+           <!-- <article class="grid grid-cols-[1fr_4fr] border border-red-600 rounded-xl p-2 hover:bg-red-500/20">
+                <span class="text-gray-400">101</span>
+                <div class="flex flex-rows gap-2 text-center">
+                    <img src="" alt="sm" class="w-5 h-5 border border-white rounded-sm">
+                <h4 class="font-bold text-white">Smart News</h4>
+                </div>
+            </article>
+            -->
+          
+        </div>
+    </aside>
+    <section class="flex w-full shrink-0 flex-col gap-3 bg-[#111827] px-6 pt-4 md:h-full md:w-80">
+      
+      <header class="flex flex-col">
+        <h2 class="text-[#94A3B8]">Liste des chaînes</h2>
+        <p class="text-gray-400"> Tout  ( <span class="channels-total"> 120,30 </span> chianes)</p>
+      </header>
+      <input type="search" placeholder="Recherche TV en direct" class="border rounded-xl p-2 text-white bg-slate-800 h-9">
+      <div id="channels-container" class="text-gray-400 pt-3 w-full">
+        <button class="flex flex-rows shrink-0 gap-4 hover:bg-gray-700 w-full h-10 cursor-pointer hover:border hover:border-gray-700 rounded-lg p-1">
+        <img src="/2m.jpg" alt="" class="channel-logo w-8 rounded">
+            <p class="channel-name">### 2M Tv</p>
+      </div>
+      </button>
+    </section>
+    <main class="border border-black w-full  bg-[#111827] rounded-xl m-7  p-2 flex flex-rows">
+        <section class="p-2 w-full">
+            <h3 class="border w-9 text-center rounded text-red-500 ">Live</h3>
+            <div class=" bg-black "> 
+                <img src="/800x450.png" alt="" class="w-550 rounded">
+            </div>
+            <div class="text-center pt-2">
+                <span id="channel-title" class="text-white font-bold "> Maroc : 2M Channel </span>
+            </div>
+            <div>
+                <h4 class="text-white">Now</h4>
+                <p class="text-gray-400">Live News </p>
+                <p class="text-gray-400 font-thin">12:30 PM - 13:00 PM</p>
+            </div>
+        </section>
+    </main>
+</div>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
