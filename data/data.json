@@ -1,0 +1,82 @@
+[
+  {
+    "id": "1",
+    "channelNumber": "1",
+    "name": "MA - 2M National",
+    "category": "",
+    "logo": "https://i.imgur.com/PJYTfHi.png",
+    "previewImage": "https://via.placeholder.com/800x450?text=Discovery+Show",
+    "streamUrl": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "isLive": true
+  },
+  {
+    "id": "2",
+    "channelNumber": "5",
+    "name": "MA - Arryadia HD1",
+    "category": "Sports",
+    "logo": "https://i.ibb.co/fYNx6Fk1/image-removebg-preview-1.png",
+    "previewImage": "https://via.placeholder.com/800x450?text=Discovery+Show",
+    "streamUrl": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "isLive": true
+  },
+  {
+    "id": "3",
+    "channelNumber": "8",
+    "name": "MA - Medi1TV Afrique",
+    "category": "Actualités",
+    "logo": "https://i.imgur.com/a20DHnj.png",
+    "previewImage": "https://via.placeholder.com/800x450?text=Discovery+Show",
+    "streamUrl": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "isLive": true
+  },
+  {
+    "id": "4",
+    "channelNumber": "15",
+    "name": "UK - Cartoon Network CEE",
+    "category": "Enfant",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
+    "previewImage": "https://via.placeholder.com/800x450?text=Discovery+Show",
+    "streamUrl": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "isLive": true
+  },
+  {
+    "id": "7",
+    "channelNumber": "19",
+    "name": "FR - Arte ",
+    "category": "Musique",
+    "logo": "68747470733a2f2f6170692d63646e2e617274652e74762f696d672f76322f696d6167652f6a34456f534a6a5832367579535657646d7433456d532f313932307831303830",
+    "previewImage": "https://via.placeholder.com/800x450?text=Discovery+Show",
+    "streamUrl": "",
+    "isLive": true
+  },
+  {
+    "id": "9",
+    "channelNumber": "20",
+    "name": "FR - LCP ",
+    "category": "Musique",
+    "logo": "https://camo.githubusercontent.com/47824b29b3e9e4a6b1cb9f761e21f6d581a981885d591556782d739dfac4bae2/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f66722f7468756d622f362f36612f4c6f676f5f4c43502d414e5f2d5f5075626c69635f532543332541396e61745f253238323031392532392e7376672f363070782d4c6f676f5f4c43502d414e5f2d5f5075626c69635f532543332541396e61745f253238323031392532392e7376672e706e67",
+    "previewImage": "https://via.placeholder.com/800x450?text=Discovery+Show",
+    "streamUrl": "",
+    "isLive": true
+  },
+  {
+    "id": "10",
+    "channelNumber": "21",
+    "name": "FR - CNews ",
+    "category": "Musique",
+    "logo": "https://camo.githubusercontent.com/42d804d1cb5f767f8a3294059c20ff81e95ce4a78d72a7804043e1f0ee3afbe0/68747470733a2f2f692e696d6775722e636f6d2f554d52474148782e706e67",
+    "previewImage": "https://via.placeholder.com/800x450?text=Discovery+Show",
+    "streamUrl": "",
+    "isLive": true
+  },
+  {
+    "id": "10",
+    "channelNumber": "22",
+    "name": "UAE - MBC Action ",
+    "category": "",
+    "logo": "https://camo.githubusercontent.com/5f39869ee1719d46e63ca99896a3db0f78388fa793a1d3029f55fd666b8f295f/68747470733a2f2f692e696d6775722e636f6d2f4f575a416768772e706e67",
+    "previewImage": "https://via.placeholder.com/800x450?text=Discovery+Show",
+    "streamUrl": "",
+    "isLive": true
+  }
+]
