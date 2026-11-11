@@ -14,17 +14,15 @@
     <div class="flex flex-cols gap-2 h-full md:flex-row">
     <aside class="flex shrink-0 w-full flex-col border-r border-gray-700 p-4 md:h-full md:w-72 gap-4 bg-[#111827] ">
             <h2 class="text-gray-50 font-bold text-xl px-4 m-2 text-shadow-md text-center">Smart Stream</h2>
-        <div class="flex flex-col text-place-center gap-4 py-4">
-            <input type="search" placeholder="Recherche Categorie" class="border rounded-xl p-2 text-white bg-slate-800 ">
-        </div>
-        <div class="flex flex-col gap-4 ">
+        
+        
           <span class="text-white">CATEGORIES</span>
-
+<div id="category-container" class="flex flex-col gap-4 ">
         <div class=" border border-gray-700 p-2 rounded-lg hover:bg-gray-700 ">
             <div class="">
-            <button class="flex  w-full cursor-pointer">
+            <button data-category="Tout"  class="flex  w-full cursor-pointer">
                 
-                <span class="text-white whitespace-nowrap">Tout les chaînes</span>
+                <span id="Tout" class="text-white whitespace-nowrap">Tout les chaînes</span>
                 
             </button>
             </div>
@@ -32,7 +30,7 @@
 
         <div class=" border border-gray-700 p-2 rounded-lg hover:bg-gray-700 ">
             <div class="">
-            <button class="grid grid-cols-3 w-full cursor-pointer">
+            <button id="cat-actualites"data-category="Actualités"   class="grid grid-cols-3 w-full cursor-pointer">
                 <span class="text-white ">Actualités</span>
                 <div class="place-self-end">
                   <span></span>
@@ -43,7 +41,7 @@
 
         <div class=" border border-gray-700 p-2 rounded-lg hover:bg-gray-700">
             <div class="">
-            <button class="grid grid-cols-3 w-full cursor-pointer">
+            <button id="cat-sports" data-category="Sports" class="grid grid-cols-3 w-full cursor-pointer">
                 <span class="text-white ">Sports</span>
                 <div class="place-self-end">
                   <span></span>
@@ -54,7 +52,7 @@
 
         <div class=" border border-gray-700 p-2 rounded-lg hover:bg-gray-700">
             <div class="">
-            <button class="grid grid-cols-3 w-full cursor-pointer">
+            <button id="cat-documetaire" data-category="Documentaire" class="grid grid-cols-3 w-full cursor-pointer">
                 <span class="text-white ">Documentaire</span>
                 <div class="place-self-end">
                   <span></span>
@@ -65,7 +63,7 @@
 
         <div class=" border border-gray-700 p-2 rounded-lg hover:bg-gray-700">
             <div class="">
-            <button class="grid grid-cols-3 w-full cursor-pointer">
+            <button id="cat-musique" data-category="Musique" class="grid grid-cols-3 w-full cursor-pointer">
                 <span class="text-white ">Musique</span>
                 <div class="place-self-end">
                   <span></span>
@@ -76,7 +74,7 @@
 
         <div class=" border border-gray-700 p-2 rounded-lg hover:bg-gray-700">
             <div class="">
-            <button class="grid grid-cols-3 w-full cursor-pointer">
+            <button id="cat-enfant" data-category="Enfant" class="grid grid-cols-3 w-full cursor-pointer">
                 <span class="text-white ">Enfant</span>
                 <div class="place-self-end">
                   <span></span>
@@ -100,25 +98,32 @@
     <section class="flex w-full shrink-0 flex-col gap-3 bg-[#111827] px-6 pt-4 md:h-full md:w-80">
       
       <header class="flex flex-col">
-        <h2 class="text-[#94A3B8]">Liste des chaînes</h2>
-        <p class="text-gray-400"> Tout  ( <span class="channels-total"> 120,30 </span> chianes)</p>
+        <h2 class="text-[#94A3B8] text-center p-1">Liste des chaînes</h2>
+        <p class="text-gray-400">Tout :  <span class="channels-total">  </span> Chaines</p>
       </header>
-      <input type="search" placeholder="Recherche TV en direct" class="border rounded-xl p-2 text-white bg-slate-800 h-9">
-      <div id="channels-container" class="text-gray-400 pt-3 w-full">
-        <button class="flex flex-rows shrink-0 gap-4 hover:bg-gray-700 w-full h-10 cursor-pointer hover:border hover:border-gray-700 rounded-lg p-1">
-        <img src="/2m.jpg" alt="" class="channel-logo w-8 rounded">
-            <p class="channel-name">### 2M Tv</p>
+      <input id="filterInput" type="search" placeholder="Recherche TV en direct" class="border rounded-xl p-2 text-white bg-slate-800 h-9">
+      <div id="channels-container" class="text-gray-400 pt-2 w-full flex flex-col gap-4 overflow-auto ">
+        
+        <!--
+        <button id="btn-Channel" class="flex flex-rows shrink-0 gap-4 hover:bg-gray-700 w-full h-10 cursor-pointer hover:border hover:border-gray-700 rounded-lg p-1">
+        <img src="" alt="" class="channel-logo w-8 rounded">
+        <p class="channel-name">
+        </p>
+        </button>
+        -->
+
+        
+
       </div>
-      </button>
     </section>
     <main class="border border-black w-full  bg-[#111827] rounded-xl m-7  p-2 flex flex-rows">
         <section class="p-2 w-full">
             <h3 class="border w-9 text-center rounded text-red-500 ">Live</h3>
             <div class=" bg-black "> 
-                <img src="/800x450.png" alt="" class="w-550 rounded">
+                <img class="live-image" src="" alt="" class="w-550 rounded">
             </div>
             <div class="text-center pt-2">
-                <span id="channel-title" class="text-white font-bold "> Maroc : 2M Channel </span>
+                <span id="channel-title" class="text-white font-bold "></span>
             </div>
             <div>
                 <h4 class="text-white">Now</h4>
