@@ -9,10 +9,10 @@
 
 
 </head>
-<body class="bg-[#0B0F19] h-screen overflow-hidden">
+<body class="bg-[#0B0F19] min-h-screen md:h-screen md:overflow-hidden">
     
-    <div class="flex flex-cols gap-2 h-full md:flex-row">
-    <aside class="flex shrink-0 w-full flex-col border-r border-gray-700 p-4 md:h-full md:w-72 gap-4 bg-[#111827] ">
+    <div class="flex flex-col md:flex-row gap-2 w-full md:h-full">
+    <aside class="flex shrink-0 w-full flex-col border-r border-gray-700 p-4  md:h-full md:w-72 gap-4 bg-[#111827] ">
             <h2 class="text-gray-50 font-bold text-xl px-4 m-2 text-shadow-md text-center">Smart Stream</h2>
         
         
@@ -102,23 +102,27 @@
         <p class="text-gray-400">Tout :  <span class="channels-total">  </span> Chaines</p>
       </header>
       <input id="filterInput" type="search" placeholder="Recherche TV en direct" class="border rounded-xl p-2 text-white bg-slate-800 h-9">
+       <div id="error" class="hidden">
+            <div class="flex flex-col gap-2 text-white">
+                <p id="error-msg" class="text-red-500"></p>
+                <button id="retry-button" class="bg-white text-black px-3 py-1 rounded cursor-pointer">Réessayer</button>
+            </div>
+        </div>
       <div id="channels-container" class="text-gray-400 pt-2 w-full flex flex-col gap-4 overflow-auto ">
-        
+
         <!--
         <button id="btn-Channel" class="flex flex-rows shrink-0 gap-4 hover:bg-gray-700 w-full h-10 cursor-pointer hover:border hover:border-gray-700 rounded-lg p-1">
         <img src="" alt="" class="channel-logo w-8 rounded">
         <p class="channel-name">
         </p>
         </button>
-        -->
-
-        
-
+        --> 
       </div>
+      
     </section>
     <main class="border border-black w-full  bg-[#111827] rounded-xl m-7  p-2 flex flex-rows">
         <section class="p-2 w-full">
-            <h3 class="border w-9 text-center rounded text-red-500 ">Live</h3>
+            <h3 class="rounded w-9 text-center  text-white m-1 absolute bg-red-500">Live</h3>
             <div class=" bg-black "> 
                 <img class="live-image" src="" alt="" class="w-550 rounded">
             </div>
@@ -126,9 +130,9 @@
                 <span id="channel-title" class="text-white font-bold "></span>
             </div>
             <div>
-                <h4 class="text-white">Now</h4>
-                <p class="text-gray-400">Live News </p>
-                <p class="text-gray-400 font-thin">12:30 PM - 13:00 PM</p>
+                <h4 id="playing-now" class="text-white"></h4>
+                <p  id="playing-title" class="text-gray-400 "></p>
+                <p  id="playing-hours"class="text-gray-400 font-thin"></p>
             </div>
         </section>
     </main>
