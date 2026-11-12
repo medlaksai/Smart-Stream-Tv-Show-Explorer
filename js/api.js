@@ -5,9 +5,9 @@ export async function getData(){
    const res = await fetch(dataApi)
    if(!res.ok){
     throw new Error(`HTTP Error! : ${res.status}` )
+
    }
    const data = await res.json()
-   console.log(data)
    return data
    }
    catch(error) {

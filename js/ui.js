@@ -5,6 +5,7 @@ const totalChannels = document.querySelector(".channels-total")
 const filterChannel = document.getElementById("filterInput")
 const categoryContainer = document.getElementById("category-container")
 
+
 let channelsData = []
 let selectCategory = "Tout"
 
@@ -18,12 +19,10 @@ categoryContainer.addEventListener("click" , (event) => {
    if(!btnCat) return
    selectCategory = btnCat.dataset.category;
    renderChannels(categoryFilter());
-   
 })
 
 
 export function renderChannels(channels){
-   
     channelsContainer.innerHTML = "";
     channelsContainer.innerHTML = channels.map((channel) =>
     `
@@ -42,8 +41,9 @@ export function renderChannels(channels){
 
 let currentFilter = "";
 export function searchChannels(){
-    const filtredChannel = channelsData.filter(channels => channels.name.toLowerCase().includes(currentFilter));
-    console.log(channelsData)
+    const filtredChannel = channelsData.filter(channels =>
+    channels.name.toLowerCase().includes(currentFilter) ||
+    String(channels.channelNumber).includes(currentFilter));
      return renderChannels(filtredChannel);
  }
 
@@ -57,13 +57,24 @@ channelsContainer.addEventListener("click" , (event) => {
     const btn = event.target.closest("button")
     const title = document.getElementById("channel-title")
     const thumbnail = document.querySelector(".live-image") 
+    const nowPlaying = document.getElementById("playing-now")
+    const titleNow = document.getElementById("playing-title")
+    const periodHours = document.getElementById("playing-hours")
     const channelId = btn.id
     const selectedChannel = channelsData.find(
         
         channel => channel.id === channelId    
     )
+    nowPlaying.textContent = "Now Playing"
+    titleNow.textContent = "Live News"
+    periodHours.textContent = "12:30 PM - 13:00 PM"
     title.textContent = selectedChannel.name  
     thumbnail.src = selectedChannel.previewImage 
+
+    channelsContainer.querySelectorAll("button").forEach(button => {
+        button.classList.remove("bg-blue-800");
+    });
+    btn.classList.add("bg-blue-800")
 })
 
 const channels = await getData();
