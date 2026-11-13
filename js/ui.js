@@ -56,7 +56,7 @@ filterChannel.addEventListener("input" , e => {
 channelsContainer.addEventListener("click" , (event) => {
     const btn = event.target.closest("button")
     const title = document.getElementById("channel-title")
-    const thumbnail = document.querySelector(".live-image") 
+    const videoSrc = document.querySelector(".live-image") 
     const nowPlaying = document.getElementById("playing-now")
     const titleNow = document.getElementById("playing-title")
     const periodHours = document.getElementById("playing-hours")
@@ -69,15 +69,15 @@ channelsContainer.addEventListener("click" , (event) => {
     titleNow.textContent = "Live News"
     periodHours.textContent = "12:30 PM - 13:00 PM"
     title.textContent = selectedChannel.name  
-    thumbnail.src = selectedChannel.previewImage 
-
+    videoSrc.src = selectedChannel.previewImage 
     channelsContainer.querySelectorAll("button").forEach(button => {
         button.classList.remove("bg-blue-800");
     });
     btn.classList.add("bg-blue-800")
 })
 
+
 const channels = await getData();
 
 channelsData = channels;
-renderChannels(channelsData);
+renderChannels(channelsData); 
