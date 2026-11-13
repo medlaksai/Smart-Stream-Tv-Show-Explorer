@@ -6,6 +6,8 @@
     <title>Smart Stream</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@videojs/cdn@10.4.0/video.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@videojs/cdn@10.4.0/media/hlsjs-video.js"></script>
 
 
 </head>
@@ -122,9 +124,15 @@
     </section>
     <main class="border border-black w-full  bg-[#111827] rounded-xl m-7  p-2 flex flex-rows">
         <section class="p-2 w-full">
-            <h3 class="rounded w-9 text-center  text-white m-1 absolute bg-red-500">Live</h3>
-            <div class=" bg-black "> 
-                <img class="live-image" src="" alt="" class="w-550 rounded">
+            
+            <div class="playerContainer"> 
+                <video-player>
+  <video-skin style="display: block; width: 100%; aspect-ratio: 16 / 9; --media-controls-before-start: visible;">
+    <h3 class="rounded w-9 text-center  text-white m-4 absolute bg-red-500">Live</h3>
+    <hlsjs-video class="live-image" src="" playsinline></hlsjs-video>
+  </video-skin>
+</video-player>
+
             </div>
             <div class="text-center pt-2">
                 <span id="channel-title" class="text-white font-bold "></span>
